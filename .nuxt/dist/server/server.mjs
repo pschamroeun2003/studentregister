@@ -1,0 +1,1 @@
+export { default } from "file:///C:/xampp3/htdocs/studentregistersystem/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
