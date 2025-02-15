@@ -1,0 +1,46 @@
+<template>
+    <div v-if="isLoading" class="overlay">
+        <div class="spinner"></div>
+    </div>
+</template>
+<script setup>
+import { ref, onMounted } from 'vue';
+const isLoading = ref(true);
+onMounted(() => {
+    setTimeout(() => {
+        isLoading.value = false;
+    }, 2000);
+});
+</script>
+<style>
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #fff;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>

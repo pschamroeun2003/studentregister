@@ -9,8 +9,8 @@ def get_current_time():
 class CourseSchedule(db.Model):
     __tablename__ = 'course_schedule'
     id = db.Column(db.Integer, primary_key=True)
-    course_id = db.Column(db.Integer, db.ForeignKey('courses.id'), nullable=False)
-    instructor_id = db.Column(db.Integer, db.ForeignKey('instructors.id'), nullable=False)
+    course_id = db.Column(db.Integer, db.ForeignKey('courses.id'), nullable=True)
+    instructor_id = db.Column(db.Integer, db.ForeignKey('instructors.id'), nullable=True)
     day_of_week = db.Column(db.String(10), nullable=False)
     start_time = db.Column(db.DateTime, nullable=False)
     end_time = db.Column(db.DateTime, nullable=False)

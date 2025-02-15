@@ -9,7 +9,7 @@ from controllers.courseschedules_routes import courseschedules_bp
 from controllers.payments_routes import payments_bp
 from flask_cors import CORS
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///register_student.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///register_student2025.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
